@@ -1,0 +1,443 @@
+<!doctype html>
+<!--
+
+Lighthouse Labs 2015
+
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Option 1 - Resume Instructions</title>
+	<link rel="stylesheet" href="assets/style.css" type="text/css">
+    <script src="assets/jquery-1.11.1.min.js"></script>
+    <script src="assets/jquery.museum.js"></script>
+    <script src="assets/instructions.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div>
+			<h1>Option 1 - Resume</h1>
+
+		</div>
+
+        <div id='nav'>
+        </div>
+        <div id="parts">
+
+            <div class='part'>
+                <h2>Welcome</h2>
+                <p>
+                    Welcome to your HTML500 Intro to HTML/CSS Assignment.
+                </p>
+                <p>
+                    In this project, you'll be setting up a simple webpage that will be displaying a resume, your own or a silly fictional one (the choice is yours, and the options are endless!). 
+                </p>
+                <h2>Setup</h2>
+                <p>
+                    Please download and install Brackets, a popular yet super simple code editor used by software developers:
+
+                    <a href="http://brackets.io/" target="_blank">Download Brackets</a>
+                </p>
+                <p>
+                    Follow the below step-by-step instructions to get building your first ever webpage.
+                </p>
+                <p>
+                    You can view the <a target="_blank" href='completed_resume/index.html'>completed version</a> to see what we will be building. (You can maybe even cheat a little!)
+                </p>
+                <h2>Part 1 - Starting Off the Content</h2>
+                <p>
+                    Let's begin with creating some content. It's always easier to build and design around the content.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        Open up <code>html500/option1_resume/index.html</code> within Brackets. It's best if you open the entire <code>option1_resume</code> folder. You can use the File &raquo;&raquo; Open Folder option from the menu bar to accomplish this. Brackets will treat the folder as a Project and let you switch between the different files easier.  
+                    </li>
+                    <li>
+                        We'll be starting out with the 'index.html' file. Go ahead and click it on the left-hand (gray) sidebar, bringing up the file's contents on the 
+                        main, right-hand side. 
+                    </li>
+                    <li>
+                        Notice there is some example text content in there.If you are like me and prefer large text, or are at all squinting to see the code, use the View &raquo; Increase Font Size option from the menu a few times.
+                    </li>
+                    <li>
+                         If you would like to just build out Knox's (example) resume, just observe the contents to understand his background and move to the next step. Otherwise, take some time to edit the text with your own name, details, skills, tools, experience, etc.
+                        <p>
+                        <img class='screenshot' src='assets/screenshots1/01.png' /></p>
+                    </li>
+                </ol>
+
+
+            </div>
+            <div class='part'>
+                <h2>Part 2 - Adding HTML markup</h2>
+                <p>
+                    Now let's add some HTML markup to our text content. The steps below will guide you through adding HTML "tags", which *always* appear inside <code>&lt;</code> and <code>&gt;</code> signs.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        First, we need to add some basic statements that every HTML document must have. Namely, these are the <code>doctype</code>, <code>html</code>, <code>head</code> and <code>body</code>:
+                        <pre>&lt;!doctype html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            Knox Harrington
+            Video Artist
+
+            ...
+
+            (Your text content goes in body.
+            This section is indented twice.)
+        &lt;/body&gt;
+    &lt;/html&gt;</pre>
+                        <p>
+                            Wrap the existing content within the <code>body</code> opening and closing tags and indent it (highlight the line(s) + hit the tab key). The reason for indenting our code is soley to keep your nested layout easily comprehensible to the human eye.
+                        </p>
+                        <img class='screenshot' src='assets/screenshots1/02.png' />
+                    </li>
+                    <li>
+                        Now in the <code>head</code> section, let's add the title of the page to the <code>title</code> tag. This can be whatever you want, but should be directly related to the content of the page. For example, "My resume". You will notice it show up as the title on your browser window or tab, and does not affect the actual contents of the page.
+                        <pre>&lt;!doctype html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            <em>&lt;title&gt;My resume&lt;title&gt;</em>
+        &lt;/head&gt;
+    ...</pre>
+                    </li>
+                </ol>
+                <p>We are ready to add the markup to our text content now. Initially, we will only make use of a few HTML tags: <code>h1</code> for the main title, <code>h2</code> through <code>h4</code> for sub section titles, <code>p</code> for paragraphs, and then <code>ul</code> and <code>ol</code> for lists.</p>
+                <p>Note that each of these tags have an opening tag (such as &lt;h1&gt;), and a closing tag (such as &lt;/h1&gt;) wrapping the text they are supposed to apply styling to.</p>
+                <ol class='steps'>
+                    <li>
+                    We will make the name the main title, hence it will get the <code>h1</code> tag. Similarly, the person's title will be <code>h2</code>.
+                        
+    <pre>...
+        &lt;body&gt;
+            &lt;h1&gt;Knox Harrington&lt;/h1&gt;
+            &lt;h2&gt;Video Artist&lt;/h2&gt;
+
+            101 - 804 Fake Street,
+            Vancouver BC, V6O3P3
+    ...</pre>
+                    </li>
+                    <li>
+                        <p>Let's save the <code>index.html</code> file, and open it in your browser in order to view it as a web page instead of just code. You can double-click the file from Finder / Windows Explorer to have it open in your default browser. In the browser, you will see the address and remaining content show up without line breaks, looking "broken".</p>
+                        <img class='screenshot' src='assets/screenshots1/03.png' />
+                        <p>This is because whitespace in HTML is ignored, new lines must be explicitly coded in. So let's fix the address layout. A new line tag is a single, self-closing <code>br</code>. Because this tag doesn't need any content within it, it's self-closing and doesn't need a closing <code>&lt;/br&gt;</code> tag to accompany it.</p>
+                        
+                        <pre>...
+            &lt;h2&gt;Video Artist&lt;/h2&gt;
+
+            101 - 804 Fake Street,<em>&lt;br /&gt;</em>
+            Vancouver BC, V6O3P3<em>&lt;br /&gt;</em>
+            knoxh@urbanachievers.com<em>&lt;br /&gt;</em>
+            +1 778-678-9354<em>&lt;br /&gt;</em>
+    ...</pre>
+                    </li>
+                    <li>
+                        <p>
+                            The subsections will be <code>h3</code>, and the paragraphs will be <code>p</code> tags. These are not exact requirements, but what's important is to pick which element will take which tags, and stay consistent with it.
+                        </p>
+                        <p>
+                            <strong>Example</strong>:
+                        </p>
+                        <pre>...
+            &lt;h3&gt;Summary&lt;/h3&gt;
+
+            &lt;p&gt;Self-taught visual effects artist with experience in fine arts productions, advertisement and new media. Previously having worked in marketing and sales, I am currently looking to bring my creative outlook and technical finesse into companies who use video to promote businesses, products or artists.&lt;/p&gt;
+    ...</pre>
+                        <img class='screenshot' src='assets/screenshots1/04.png' />
+                    </li>
+                    <li>
+                        <strong>Important Tip:</strong> No matter what you are coding, it's *always* good practice to make small, incremental changes while reviewing the result. So in this case, that means updating each section's markup, switching to the browser, refreshing the page to verify that it's updated correctly, and then continuing again with another small change to the code.
+                    </li>
+                    <li>
+                        Let's take the content that's in list form, and apply proper list styling to it. For unordered lists with bullet points, we can use the <code>ul</code> tag. For ordered lists with numbers, <code>ol</code>. Inside the list, each list item is wrapped in <code>li</code> tags.
+                        <pre>...
+            &lt;h3&gt;Skills&lt;/h3&gt;
+
+            &lt;ul&gt;
+                &lt;li&gt;2d and 3d rendering&lt;/li&gt;
+                &lt;li&gt;Texturing&lt;/li&gt;
+                &lt;li&gt;Compositing&lt;/li&gt;
+                &lt;li&gt;On-set supervision&lt;/li&gt;
+                &lt;li&gt;Color grading&lt;/li&gt;
+                &lt;li&gt;Motion graphics design&lt;/li&gt;
+            &lt;/ul&gt;
+    ...</pre>
+                        Feel free to choose which parts of the content you'd like to display in list form and edit to your taste.
+                    </li>
+                    <li>
+                        In the given example, the "Work Experience" section has three characteristics: it's a chronologically ordered list, displays the workplace, and the description. So we will represent these three bits of information as different HTML tags. How about: an ordered list (<code>ol</code> and <code>li</code>'s.), with titles (<code>h5</code>), and description paragraphs (<code>p</code>).
+                        <pre>...
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;h5&gt;Disney - The Lion King (1994)&lt;/h5&gt;
+                    &lt;p&gt;Worked on keying, rotoscoping and compisiting the promo trailer&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h5&gt;Valve - Half Life (1998)&lt;/h5&gt;
+                    &lt;p&gt;3d Character design and ragdoll animations&lt;/p&gt;
+                &lt;/li&gt;
+                ...
+            &lt;/ol&gt;
+    ...</pre>
+                    </li>
+                </ol>
+                <p>By this point, you should be able to load your index.html in the browser again, and see what kind of default styling these HTML tags added to your content. The titles look like titles, and lists act like lists.</p>
+                <img class='screenshot' src='assets/screenshots1/05.png' />
+                <p>Although browsers provide this default appearance, we are free to change the styling of these elements as we like, which will be discussed in the next section.</p>
+            </div>
+
+            <div class='part'>
+                <h2> Part 3 - Introduction to styling with CSS</h2>
+                <p>
+                    Congrats, you're all done adding basic markup to your content. You may notice that this page is rather... bland. CSS is the language used for styling HTML, so we will be writing some CSS. The first step is to add the <code>link</code> tag within the <code>head</code> of the index of the 'index.html' file. It should look like:<br /> <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;resume.css&quot;&gt;</pre> This will link the CSS to the page, where we can make things look prettier.
+                </p>
+                <img class='screenshot' src='assets/screenshots1/06.png' />
+                <p>
+                    CSS statements are made of two parts: the element selector that the styling should apply to, and then the style attributes inside the curly braces.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        Open and edit the resume.css file that sits in the same folder, and add some basic styling. We will give the background a color, fix up our fonts, and our spacing.
+                        <pre>html, body {
+    margin: 0;
+}
+body {
+    background: #CCDCE4;
+    padding: 20px;
+    color: #222;
+    font-family: "Helvetica", "Arial", sans-serif;
+}</pre>
+                        <img class='screenshot' src='assets/screenshots1/07.png' />
+                    </li>
+                    <li>
+                        <p>Now let's center the content so it doesn't reach to the far left and right sides of your browser window.
+                        To do this, we will need to go back to the HTML file, and wrap all your content in a new element to group them together. Let's use the <code>div</code> tag. Div stands for division. It is an HTML element that has no default styling, so we will need to use our own CSS for it. Let's also add an ID to it, so we can reference it from our CSS.</p>
+                        <pre>...
+        &lt;body&gt;
+            <em>&lt;div id="resume"&gt;</em>
+                &lt;h1&gt;Knox Harrington&lt;/h1&gt;
+                &lt;h2&gt;Video Artist&lt;/h2&gt;
+                ...
+            <em>&lt;/div&gt;</em>
+        &lt;/body&gt;
+    &lt;/html&gt;</pre>
+                        Note that all the content has been indented one more time, since there is another wrapping element (the div) now.
+                    </li>
+                    <li>
+                        <p>If you view your page now, it will not look any different, because no CSS has been added to our new div. So let's add the CSS below to the end of the resume.css file. (Ignore the "...")</p>
+                        <pre>...
+
+#resume {
+    width: 800px;
+    margin: 50px auto;
+}</pre>
+                       <p> Now you should be able to see the changes reflected in your browser. Notice the blank space on the sides. If your browser window is small, you may have to expand it to see the change.</p>
+                        <img class='screenshot' src='assets/screenshots1/08.png' />
+                    </li>
+                    <li>
+                        <p>Here are some more stylings done below. They will demonstrate some more features such as borders, font sizes, etc. You may place them at the end of your CSS file.</p>
+                        <pre>...
+
+h3 {
+    border-bottom: 2px solid #000;
+    font-size: 20px;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    margin: 2px 0 5px 0;
+}
+
+ul, ol {
+    padding: 0;
+}</pre>
+                        <img class='screenshot' src='assets/screenshots1/09.png' />
+                    </li>
+                </ol>
+                At this point you should have a basic understanding of how HTML elements work together with CSS attributes. Let's continue doing some more exercises.
+            </div>
+            <div class='part'>
+                <h2> Part 4 - Making it prettier</h2>
+                <p>
+                    Now that we have the basics down, it's time to make our resume look professional with some more advanced styling.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        Let's add different background colors and a drop shadow by replacing the <code>#resume</code> section of our CSS with the following:
+                        <pre>#resume {
+    position: relative;
+    width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border: 2px solid #334668;
+    box-shadow: 0 0 300px #000;
+}
+</pre>
+                        <img class='screenshot' src='assets/screenshots1/10.png' />
+                    </li>
+                    <li>
+                        <p>It's amazing what good fonts can do to your design. <a href="https://www.google.com/fonts">Google Web Fonts</a> is an excellent resource for finding and using free fonts on your website. Open Sans and Josefin Sans seem like decent enough fonts for a handsome resume.</p>
+                        <p>
+                            You can add Google Web fonts to your page by adding these two lines to your <code>&lt;head&gt;</code> section:
+                        </p>
+                        <pre>...
+    &lt;head&gt;
+        &lt;title&gt;Resume - Knox Harrington&lt;/title&gt;
+        &lt;link rel="stylesheet" type="text/css" href="resume.css"&gt;
+        <em>&lt;link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'&gt;
+        &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'&gt;</em>
+    &lt;/head&gt;
+</pre>
+                        <p>Replace the <code>body</code> CSS with the following:</p>
+<pre>body {
+    color: #334668;
+    background: #8394B1;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    text-shadow: 0px 1px 0 #fff;
+}</pre>
+                        <p>And the <code>h3</code> CSS with:</p>
+<pre>h3 {
+    border-bottom: 2px solid #C9D0DB;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+}
+</pre>
+                        <img class='screenshot' src='assets/screenshots1/11.png' />
+                        <p>
+                            Observe the CSS statements we added, and feel free to mess around with them.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Another easy way to make things look professional is making good use of whitespace! Now let's add some blank space to the left side of each section, so the titles pop out a little more. To do this, we will need to wrap each bit that we want shifted in an HTML tag.</p>
+                        <p>
+                            The <code>section</code> tag should be a good option, since what we will be refering to are essentially sections of the resume. Refer to the screenshot below to see what we mean by "wrapping" in the <code>section</code> tag.
+                        </p>
+                        <img class='screenshot' src='assets/screenshots1/12.png' />
+                        <p>
+                            To keep things nice and readable, make sure the now-wrapped content to be indented.
+                        </p>
+                        <p>
+                            Once you add the following CSS for the sections, we should see the improved layout:
+                        </p>
+<pre>section {
+    margin-left: 150px;
+    margin-right: 50px;
+}</pre>
+                        <img class='screenshot' src='assets/screenshots1/13.png' />
+                    </li>
+                </ol>
+            </div>
+            <div class='part'>
+                <h2> Part 5 - Adding your picture</h2>
+                <p>
+                    Time to add a photo to the resume. If you've made it this far, you likely have a face, so feel free to use a picture of your own instead of the example provided.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        <p>
+                            Start by adding an <code>img</code> tag before the main title referring to the location of the image:
+                            <pre>&lt;img id='headshot' src='images/knox.png' /&gt;</pre>
+                            It's probably easiest to place your own picture in the same folder, and fix the filename from knox.png to your own.
+                        </p>
+                        <img class='screenshot' src='assets/screenshots1/14.png' />
+                        <img class='screenshot' src='assets/screenshots1/15.png' />
+                    </li>
+                    <li>
+                        <p>
+                            Add the following CSS to give it some styling, and to make it align itself to the left side, pushing the titles over to the right. This is a result of the CSS property <code>float: left;</code>
+                        </p>
+                        <pre>img#headshot {
+    float: left;
+    height: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 2px solid #C9D0DB;
+}</pre>
+                        <img class='screenshot' src='assets/screenshots1/16.png' />
+                    </li>
+                    <li>
+                        <p>
+                            We can also make the contact info align to the right side by wrapping it in its own HTML element and making it <code>float: right;</code>
+                        </p>
+                        <p>
+                            Let's use the <code>address</code> element, which is available in HTML5. If we want it to appear at the very top left side, it's best to put it before the title. Refer to the screenshot below to see what that means, and also add the CSS statements.
+                        </p>
+                        <img class='screenshot' src='assets/screenshots1/17.png' />
+                        <pre>address {
+    float: right;
+}</pre>
+                        <img class='screenshot' src='assets/screenshots1/18.png' />
+                        <p>
+                            Notice how the address is now italic. This is due to the default styling browsers apply to the <code>address</code> element.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <div class='part'>
+                <h2> Part 6 - BONUS: Adding skill meters</h2>
+                <p>
+                    Some resumes make use of visual indicators to convey how experienced the person is with their skills. We will make it look like the screenshot below.
+                </p>
+                <img class='screenshot' src='assets/screenshots1/19.png' />
+                <ol class='steps'>
+                    <li>
+                        <p>
+                            We will make use of nested <code>span</code> tags to achieve this effect.
+                            Add the following tags to your "Tools" list, paying close attention to the <code>class</code> and <code>style</code> attributes:
+                        </p>
+                        <img class='screenshot' src='assets/screenshots1/20.png' />
+                        <p>And as usual, add the css:</p>
+                        <pre>.meter {
+    display: inline-block;
+    width: 100px;
+    height: 7px;
+    border: 1px solid #334668;
+    margin-right: 5px;
+}
+.meter span {
+    display: block;
+    height: 7px;
+    background: #334668;
+}</pre>
+
+                        <p>
+                            In your HTML markup, you can adjust the percentage numbers used in the <code>style</code> attributes to change the length of the bars.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <div class='part'>
+                <h2> Part 7 - You're done!</h2>
+                <p>
+                    This instruction guide was also made with HTML and CSS! (and a little bit of JavaScript for the interactivity, which we haven't covered in this guide.)
+                </p>
+                <p>
+                    Go ahead and (right click and) view the page source to check out how it was done!
+                </p>
+            </div>
+
+        </div>
+        <div>
+        </div>
+	</div>
+
+</body>
+</html>

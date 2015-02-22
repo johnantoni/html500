@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+}
+body {
+    color: #334668;
+    background: #8394B1;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    text-shadow: 0px 1px 0 #fff;
+}
+
+#resume {
+    position: relative;
+    width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border: 2px solid #334668;
+    box-shadow: 0 0 300px #000;
+}
+ 
+
+h3 {
+    clear: both;
+    border-bottom: 2px solid #C9D0DB;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+}
+
+
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    margin: 2px 0 5px 0;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+section {
+    margin-left: 150px;
+    margin-right: 50px;
+}
+img#headshot {
+    float: left;
+    height: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 2px solid #C9D0DB;
+}
+
+address {
+    float: right;
+}
+
+.meter {
+    display: inline-block;
+    width: 100px;
+    height: 7px;
+    border: 1px solid #334668;
+    margin-right: 5px;
+}
+.meter span {
+    display: block;
+    height: 7px;
+    background: #334668;
+}
+

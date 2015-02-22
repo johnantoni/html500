@@ -1,0 +1,438 @@
+<!doctype html>
+<!--
+
+Lighthouse Labs 2015
+
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Option 2 - Company Page Instructions</title>
+	<link rel="stylesheet" href="assets/style.css" type="text/css">
+    <script src="assets/jquery-1.11.1.min.js"></script>
+    <script src="assets/jquery.museum.js"></script>
+    <script src="assets/instructions.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div>
+			<h1>Option 2 - Company Page</h1>
+
+		</div>
+
+        <div id='nav'>
+        </div>
+        <div id="parts">
+
+            <div class='part'>
+                <h2>Welcome</h2>
+                <p>
+                    Welcome to your HTML500 Intro to HTML/CSS Assignment.
+                </p>
+                <p>
+                    In this project, you'll be setting up a simple webpage that will be displaying a company, your own or a silly fictional one (the choice is yours, and the options are endless!). 
+                </p>
+                <h2>Setup</h2>
+                <p>
+                    Please download and install Brackets, a popular yet super simple code editor used by software developers:
+
+                    <a href="http://brackets.io/" target="_blank">Download Brackets</a>
+                </p>
+                <p>
+                    Follow the below step-by-step instructions to get building your first ever webpage.
+                </p>
+                <p>
+                    You can view the <a target="_blank" href='completed_company/index.html'>completed version</a> to see what we will be building. (You can maybe even cheat a little!)
+                </p>
+                <h2>Part 1 - Starting Off the Content</h2>
+                <p>
+                    Let's begin with creating some content. It's always easier to build and design around the content.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        Open up <code>html500/option2_company/index.html</code> within Brackets. It's best if you open the entire <code>option2_company</code> folder. This will let you switch between the different files easier. We'll be starting out with the 'index.html' file.
+                    </li>
+                    <li>
+                        Notice there is some example text content in there. If you would like to work with the examples, just observe the contents and move to the next step. Otherwise, edit the content with your own name and details.
+                        <p><img class='screenshot' src='assets/screenshots2/01.png' /></p>
+                    </li>
+                </ol>
+
+
+            </div>
+            <div class='part'>
+                <h2>Part 2 - Adding HTML markup</h2>
+                <p>
+                    Now let's add some markup to our text content. The steps below will guide you through adding HTML tags, which are statements wrapped around &lt; and &gt; signs.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        First, we need to add some basic statements that every HTML document must have. Namely, these are the <code>doctype</code>, <code>html</code>, <code>head</code> and <code>body</code>:
+                        <pre>&lt;!doctype html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            Terrapin Wellness
+            The spa that your turtle deserves
+
+            ...
+
+            (Your text content goes in body.
+            This section is indented twice.)
+        &lt;/body&gt;
+    &lt;/html&gt;</pre>
+                        <p>Wrap the existing content with the body and indent it (highlight + hit the tab key) to keep your nested layout easily comprehensible to the human eye.</p>
+                        <img class='screenshot' src='assets/screenshots2/02.png' />
+                    </li>
+                    <li>
+                        Now in the <code>head</code> section, let's add the title of the page to the <code>title</code> tag. This can be whatever you want, but should be directly related to the content of the page. For example, “Terrapin Wellness”. You will notice it show up as the title on your browser window or tab.
+                        <pre>&lt;!doctype html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            <em>&lt;title&gt;Terrapin Wellness&lt;title&gt;</em>
+        &lt;/head&gt;
+    ...</pre>
+                    </li>
+                </ol>
+                <p>We are ready to add the markup to our text content now. Initially, we will only make use of a few HTML tags: <code>h1</code> for the main title, <code>h2</code> through <code>h4</code> for sub section titles, <code>p</code> for paragraphs, and then <code>ul</code> and <code>ol</code> for lists.</p>
+                <p>Note that each of these tags have an opening tag (such as &lt;h1&gt;), and a closing tag (such as &lt;/h1&gt;) wrapping the text they are supposed to apply styling to.</p>
+                <ol class='steps'>
+                    <li>
+                    We will make the name the main title, hence it will get the <code>h1</code> tag. Similarly, the person's title will be <code>h2</code>.
+                        
+    <pre>...
+        &lt;body&gt;
+            &lt;h1&gt;Terrapin Wellness&lt;/h1&gt;
+            &lt;h2&gt;The spa that your turtle deserves&lt;/h2&gt;
+
+            Our cleansing, nourishing and relaxing facilities.
+            will provide the ideal vacation for your precious turtles.
+            Treat them to what they would ask for,
+    ...</pre>
+                    </li>
+                    <li>
+                        The subsections will be <code>h3</code>, and the paragraphs will be <code>p</code> tags. These are not exact requirements, but what's important is to pick which element will take which tags, and stay consistent with it.
+
+                        <pre>...
+            &lt;p&gt;
+                Our cleansing, nourishing and relaxing facilities will provide the ideal vacation for your precious turtles.
+                Treat them to what they would ask for, if they could.
+                Starting at $49/day
+            &lt;/p&gt;
+
+            &lt;h3&gt;Services&lt;/h3&gt;
+    ...</pre>
+                    </li>
+                    <li>
+                        Let's take the content that's in list form, and apply proper list styling to it. For unordered lists with bullet points, we can use the <code>ul</code> tag. For ordered lists with numbers, <code>ol</code>. Inside the list, each list item is wrapped in <code>li</code> tags.
+                        <pre>...
+            &lt;h3&gt;Services&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Pro-biotic anti-bacterial cleaning&lt;/li&gt;
+                &lt;li&gt;Organic multigrain feeding&lt;/li&gt;
+                &lt;li&gt;Algae smoothies&lt;/li&gt;
+                &lt;li&gt;Oxygen bar&lt;/li&gt;
+            &lt;/ul&gt;            
+    ...</pre>
+                        <img class='screenshot' src='assets/screenshots2/03.png' />
+                        <p>Feel free to choose which parts of the content you'd like to display in list form and edit to your taste.</p>
+                    </li>
+                    <li>
+                        <p>When you load the <code>index.html</code> file in your browser, (you should be able to double-click it to have it open in a browser), you will see the content looking more or less neatly organized.</p>
+                        <img class='screenshot' src='assets/screenshots2/04.png' />
+                        <p>Notice however, that the introductory paragraph, and the contact info at the bottom, are shown on single lines, instead of being separated into multiple lines as it is in your raw index.html file.</p>
+                        <p>This is because since whitespace in HTML is ignored, new lines must be explicitly coded. So let's fix the address layout. A new line tag is a single, self-closing <code>br</code>.</p>
+                        
+                        <pre>...
+            &lt;p&gt;
+                Our cleansing, nourishing and relaxing facilities<em>&lt;br /&gt;</em>
+                will provide the ideal vacation for your precious turtles.<em>&lt;br /&gt;</em>
+                Treat them to what they would ask for,<em>&lt;br /&gt;</em>
+                if they could.<em>&lt;br /&gt;
+                &lt;br /&gt;</em>
+                Starting at $49/day
+            &lt;/p&gt;
+...
+            Terrapin Wellness Inc.<em>&lt;br /&gt;</em>
+            44-5058 Fake Avenue<em>&lt;br /&gt;</em>
+            Vancouver, BC, V6R 3P4<em>&lt;br /&gt;
+            &lt;br /&gt;</em>
+            Tel: 778-000-0010<em>&lt;br /&gt;</em>
+            Fax: 778-000-0011
+...</pre>
+                    </li>
+                </ol>
+                <p>By this point, you should be able to load your index.html in the browser again, and see what kind of default styling these HTML tags added to your content. The titles look like titles, and lists act like lists.</p>
+                <img class='screenshot' src='assets/screenshots2/05.png' />
+                <p>Although browsers provide this default functionality, we are free to change the styling of these elements as we like, which will be discussed in the next section.</p>
+            </div>
+
+            <div class='part'>
+                <h2> Part 3 - Introduction to styling with CSS</h2>
+                <p>
+                    Congrats, you're all done adding basic markup to your content. You may notice that this page is rather... bland. CSS is the language used for styling HTML, so we will be writing some CSS. The first step is to add the <code>link</code> tag within the <code>head</code> tag of the 'index.html' file. It should look like:<br /> <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;company.css&quot;&gt;</pre> This will link the CSS to the page, where we can make things look prettier.
+                </p>
+                <img class='screenshot' src='assets/screenshots2/06.png' />
+                <p>
+                    CSS statements are made of two parts: the element selector that the styling should apply to, and then the style attributes inside the curly braces.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        Edit the company.css file in the same folder, and add some basic styling. We will give the background a color, fix up our fonts, and our spacing.
+<pre>html, body {
+    margin: 0;
+}
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+</pre>
+                        <img class='screenshot' src='assets/screenshots2/07.png' />
+                    </li>
+                    <li>
+                        <p>Now let's center the content so it doesn't reach to the far left and right sides of your browser window.
+                        To do this, we will need to wrap all your content in a new element to group them together. Let's use the <code>div</code> tag. Div stands for division. It is an HTML element that has no default styling, so we will need to use our own CSS for it. Let's also add an ID to it, so we can reference it from our CSS.</p>
+                        <pre>...
+        &lt;body&gt;
+            <em>&lt;div id="wrapper"&gt;</em>
+                &lt;h1&gt;Terrapin Wellness&lt;/h1&gt;
+                &lt;h2&gt;The spa that your turtle deserves&lt;/h2&gt;
+                ...
+            <em>&lt;/div&gt;</em>
+        &lt;/body&gt;
+    &lt;/html&gt;</pre>
+                        Note that all the content has been indented one more time, since there is another wrapping element (the div) now.
+                    </li>
+                    <li>
+                        <p>If you view your page now, it will not look any different, because no CSS has been added to our new div. So let's add the CSS below to the end of the company.css file. (Ignore the "...")</p>
+                        <pre>...
+
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+    min-height: 100%;
+    box-shadow: 0 0 50px #000;
+}
+</pre>
+                       <p> Now you should be able to see the changes reflected in your browser. Notice the blank space on the sides.</p>
+                        <img class='screenshot' src='assets/screenshots2/08.png' />
+                    </li>
+                    <li>
+                        <p>Here are some more stylings done below. They will demonstrate some more features such font sizes, margin etc.</p>
+                        <pre>...
+
+h1 {
+    margin: 0;
+}
+h2 {
+    margin: 0 0 70px 0;
+}
+h3 {
+    color: #C5E74B;
+    font-size: 20px;
+}</pre>
+                        <img class='screenshot' src='assets/screenshots2/09.png' />
+                    </li>
+                </ol>
+                At this point you should have a basic understanding of how HTML elements work together with CSS attributes. Let's continue doing some more exercises.
+            </div>
+            <div class='part'>
+                <h2> Part 4 - Making it prettier</h2>
+                <p>
+                    Now that we have the basics down, it's time to make our company look professional with some more advanced styling.
+                </p>
+                <ol class='steps'>
+                    <li>
+                        <p>We can make our page look professional (or extra silly in this case) by choosing the right fonts. <a href="https://www.google.com/fonts">Google Web Fonts</a> is an excellent resource for finding and using free fonts on your website. Open Sans and Josefin Sans seem like decent enough fonts for a handsome company.</p>
+                        <p>
+                            You can add Google Web fonts to your page by adding these two lines to your <code>&lt;head&gt;</code> section:
+                        </p>
+                        <pre>...
+    &lt;head&gt;
+        &lt;title&gt;Terrapin Wellness&lt;/title&gt;
+        <em>&lt;link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'&gt;</em>
+        &lt;link rel="stylesheet" href="company.css"&gt;
+    &lt;/head&gt;
+</pre>
+                        <p>Now we can aff the following CSS, and apply the new font to all the titles elements:</p>
+<pre>
+h1, h2, h3 {
+    font-family: "Courgette";
+}
+</pre>
+                        <img class='screenshot' src='assets/screenshots2/10.png' />
+                    </li>
+                    <li>
+                        <p>Another easy way to make things look professional is separating each section of our content clearly. To do this, we will need to wrap each section in its own HTML tag.</p>
+                        <p>
+                            Here, we have a few options. It's always best to use the HTML tags that match the type of content they wrap. The <code>section</code> tag, <code>header</code> tag and <code>footer</code> tags should be good fits, since they represent exactly what the content is! Refer to the screenshot below to see what we mean by "wrapping" the content in these tags.
+                        </p>
+                        <img class='screenshot' src='assets/screenshots2/11.png' />
+                        <p>
+                            To keep things nice and readable, make sure the now-wrapped content to be indented.
+                        </p>
+                        <p>
+                            Pay close attention to how we split up the sections. The introduction got the <code>header</code> tag, the middle content got the <code>section</code> tag, and the contact info at the bottom got the <code>footer</code> tag.
+                        </p>
+                        <p>
+                            Now we will add (a lot of) CSS to make all of this look pretty.
+                        </p>
+<pre>header {
+    height: 300px;
+    color: #fff;
+    text-align: right;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+section {
+    background: #1E4E03;
+    color: #fff;
+    padding: 20px 50px;
+    overflow: auto;
+}
+
+footer {
+    color: #A3B65E;
+    background-color: #133002;
+    padding: 50px;
+    text-align: center;
+}</pre>
+                        <img class='screenshot' src='assets/screenshots2/12.png' />
+                        <p>
+                            Feel free to mess around with the CSS statements we added. It should mostly be self-explanatory, and trial-and-error is often a legitimate way to learn. You can adjust the colors, backgrounds, paddings, and text placements by modifying the statements provided above.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <div class='part'>
+                <h2> Part 5 - Adding pictures</h2>
+                <p>
+                    Time to add some pictures to our content. 
+                </p>
+                <ol class='steps'>
+                    <li>
+                        <p>
+                            The first image we will add is going to be a background image on the <code>header</code>. This will be easy since the HTML tag is already added. All we need to add is some CSS:
+                        </p>
+                        <pre>header {
+    background-color: #000;
+    background-image: url(images/turtle_bath.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}</pre>
+                        <p>
+                            As you see above, you can either add it as a new CSS statement (therefore having two separate <code>header {...}</code> statements), or you can add the <code>background</code> properties into the existing <code>header {...}</code> section.
+                        </p>
+                        <img class='screenshot' src='assets/screenshots2/13.png' />
+                        <img class='screenshot' src='assets/screenshots2/14.png' />
+                    </li>
+                    <li>
+                        <p>
+                            Add the following <code>img</code> tag right after the opening <code>section</code> tag.
+                        </p>
+                        <pre>&lt;img class="brush" src="images/turtle_brush2.jpg" /&gt;</pre>
+                        <img class='screenshot' src='assets/screenshots2/15.png' />
+                        <p>
+                            Then, add the following CSS to give it some styling, and to make it align itself to the right side, therefore leaving the text on the right side. This is a result of the CSS property <code>float: right;</code>
+                        </p>
+                        <pre>img.brush {
+    float: right;
+    margin-left: 50px;
+    height: 200px;
+    box-shadow: 0 0 25px #000;
+}</pre>
+                        <img class='screenshot' src='assets/screenshots2/16.png' />
+                    </li>
+                </ol>
+            </div>
+            <div class='part'>
+                <h2> Part 6 - Adding a call to action button</h2>
+                <p>
+                    Most companies can benefit from a call to action, whether it's to sign up, or to contact. We will add a button to the header that sends an email to the company.
+                </p>
+                <p>
+                    Add the following <code>a</code> tag at the end of your <code>header</code>, which stands for anchor, to link to your email address:
+                </p>
+                <pre>&lt;a class="action" href="mailto:contact@terrapinwellness.com"&gt;Send your turtle in now!&lt;/a&gt;</pre>
+
+                <img class='screenshot' src='assets/screenshots2/17.png' />
+
+                <p>
+                    And once we add the following CSS, it should look like the screenshot below.
+                </p>
+                <pre>a.action {
+    border: 1px solid #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+                </pre>
+                <img class='screenshot' src='assets/screenshots2/18.png' />
+            </div>
+            <div class='part'>
+                <h2> Part 7 - BONUS: Adding icons</h2>
+                <p>
+                    Some companys make use of icons to highlight their main services or specialties. We will make it look like the screenshot below.
+                </p>
+                <img class='screenshot' src='assets/screenshots2/19.png' />
+                <ol class='steps'>
+                    <li>
+                        <p>
+                            First, we need to add the HTML markup for our newly added content. We will add a new <code>section</code> tag and fill in the icon details. Refer to the screenshot below, and type the content in.
+                        </p>
+                        <p>
+                            Note that inside the <code>section</code>, we have a <code>div</code> with <code>class="icon"</code>, and inside that, an <code>img</code> and a <code>p</code>.
+                        </p>
+                        <img class='screenshot' src='assets/screenshots2/20.png' />
+                        <p>And as usual, add the css:</p>
+                        <pre>#icons {
+    background: #587E44;
+    color: #DFFFBB;
+}
+
+#icons .icon {
+    float: left;
+    text-align: center;
+    width: 230px;
+}
+
+#icons .icon img {
+    width: 100px;
+}
+</pre>
+
+                        <p>
+                            You may replace the image files with your own if you'd like to use your own icons.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <div class='part'>
+                <h2> Part 8 - You're done!</h2>
+                <p>
+                    This instruction guide was also made with HTML and CSS! (and a little bit of JavaScript for the interactivity, which we haven't covered in this guide.)
+                </p>
+                <p>
+                    Go ahead and (right click and) view the page source to check out how it was done!
+                </p>
+            </div>
+
+        </div>
+        <div>
+        </div>
+	</div>
+
+</body>
+</html>
+
